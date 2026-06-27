@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>404</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts (Poppins & Montserrat) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    
+    <script>
+        // Konfigurasi Tailwind Identik dengan halaman sebelumnya
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primer: '#006B3F',
+                        sekunder: '#D4AF37',
+                        aksen: '#0A4D28',
+                        gelap: '#111111',
+                        terang: '#FFFFFF',
+                        abu: '#6B7280'
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
+                        'nav': '0 -4px 24px -6px rgba(0, 0, 0, 0.08)',
+                        'card': '0 2px 12px rgba(0,0,0,0.04)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .app-container {
+            max-width: 480px;
+            margin: 0 auto;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+            box-shadow: 0 0 50px rgba(0,0,0,0.1);
+        }
+        
+        .interactive-scale { transition: transform 0.15s ease, background-color 0.2s ease, box-shadow 0.2s ease; }
+        .interactive-scale:active { transform: scale(0.96); }
+    </style>
+</head>
+
+<body class="bg-gray-100 dark:bg-black text-gelap dark:text-terang font-montserrat antialiased selection:bg-primer selection:text-terang transition-colors duration-300">
+
+    <main class="app-container bg-gray-50 dark:bg-gelap pb-24 flex flex-col transition-colors duration-300">
+        
+        <!-- Header Minimalis -->
+        <header class="sticky top-0 z-50 bg-gradient-to-r from-primer to-aksen px-5 py-4 shadow-lg rounded-b-3xl">
+            <!-- Background Pattern Header -->
+            <div class="absolute inset-0 z-0 overflow-hidden rounded-b-3xl pointer-events-none">
+                <img src="https://res.cloudinary.com/ddtgjvetf/image/upload/v1782566341/bg_dhriqm.jpg" class="w-full h-full object-cover opacity-25 mix-blend-overlay" alt="Texture">
+            </div>
+
+            <div class="flex justify-between items-center relative z-10">
+                <!-- Info Logo & Title -->
+                <div class="flex items-center space-x-3">
+                    <a href="/" class="bg-terang/90 p-1.5 rounded-full shadow-sm backdrop-blur-sm interactive-scale">
+                        <img src="https://res.cloudinary.com/ddtgjvetf/image/upload/v1782558968/logo_ks2snq.png" alt="Logo" class="h-7 w-7 object-contain">
+                    </a>
+                    <div class="flex flex-col">
+                        <span class="font-poppins font-bold text-[14px] leading-tight text-terang drop-shadow-md">Mohon Maaf</span>
+                        <span class="font-montserrat font-medium text-[11px] leading-tight text-terang/90 drop-shadow-md">Masih Pengembangan</span>
+                    </div>
+                </div>
+                
+                <!-- Tombol Mode Gelap -->
+                <button class="theme-toggle w-9 h-9 flex items-center justify-center rounded-full bg-terang/10 border border-terang/20 backdrop-blur-md text-terang interactive-scale">
+                    <i class="fa-solid fa-moon text-[13px]"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Konten 404 (Flex untuk memusatkan di tengah layar) -->
+        <section class="flex-1 flex flex-col justify-center items-center px-6 relative z-10 -mt-10">
+            
+            <!-- Ikon Ilustrasi Sedang Dibangun -->
+            <div class="relative w-32 h-32 mb-6 flex items-center justify-center">
+                <div class="absolute inset-0 bg-primer/10 dark:bg-primer/20 rounded-full animate-ping opacity-75"></div>
+                <div class="relative w-24 h-24 bg-primer/20 dark:bg-sekunder/20 rounded-full flex items-center justify-center backdrop-blur-sm border-2 border-primer/30 dark:border-sekunder/30">
+                    <i class="fa-solid fa-person-digging text-5xl text-primer dark:text-sekunder"></i>
+                </div>
+            </div>
+
+            <!-- Pesan Error -->
+            <div class="text-center">
+                <h1 class="font-poppins font-bold text-3xl text-gelap dark:text-terang mb-2">31126</h1>
+                <h2 class="font-poppins font-bold text-[14px] text-primer dark:text-sekunder mb-3">Dalam Tahap Pengembangan</h2>
+                <p class="font-montserrat font-medium text-[12px] text-abu mb-8 leading-[1.6] max-w-[280px] mx-auto">
+                    Mohon maaf, halaman ini belum tersedia. Sedang dalam tahap pengembangan, silahkan kembali nanti.
+                </p>
+                
+                <!-- Tombol Kembali -->
+                <a href="/" class="inline-flex items-center space-x-2 bg-gradient-to-r from-primer to-aksen hover:from-aksen hover:to-primer text-terang font-poppins font-bold text-[14px] py-3.5 px-8 rounded-full shadow-lg shadow-primer/30 transition-all interactive-scale">
+                    <i class="fa-solid fa-arrow-left text-[12px]"></i>
+                    <span>Beranda</span>
+                </a>
+            </div>
+            
+        </section>
+
+        <!-- Navigasi Bawah -->
+        <nav class="fixed bottom-0 w-full max-w-[480px] bg-terang/95 dark:bg-[#1C1C1E]/95 backdrop-blur-lg border-t border-gray-200/60 dark:border-gray-800 px-6 py-2 pb-[calc(env(safe-area-inset-bottom)+12px)] z-40 shadow-nav transition-colors">
+            <div class="flex justify-between items-center pt-2">
+                <!-- Tidak ada yg aktif, karena ini bukan halaman utama -->
+                <a href="/" class="flex flex-col items-center space-y-1.5 text-abu hover:text-primer dark:hover:text-sekunder transition-colors w-16 group">
+                    <i class="fa-solid fa-house text-[22px] group-active:scale-90 transition-transform"></i>
+                    <span class="font-montserrat font-medium text-[10px]">Beranda</span>
+                </a>
+                
+                <a href="/liputan" class="flex flex-col items-center space-y-1.5 text-abu hover:text-primer dark:hover:text-sekunder transition-colors w-16 group">
+                    <i class="fa-solid fa-newspaper text-[22px] group-active:scale-90 transition-transform"></i>
+                    <span class="font-montserrat font-medium text-[10px]">Liputan</span>
+                </a>
+                
+                <a href="/profil" class="flex flex-col items-center space-y-1.5 text-abu hover:text-primer dark:hover:text-sekunder transition-colors w-16 group">
+                    <i class="fa-regular fa-user text-[22px] group-active:scale-90 transition-transform"></i>
+                    <span class="font-montserrat font-medium text-[10px]">Profil</span>
+                </a>
+            </div>
+        </nav>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Logika Toggle Tema (Dark/Light Mode)
+            const themeBtns = document.querySelectorAll('.theme-toggle');
+            themeBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.documentElement.classList.toggle('dark');
+                    themeBtns.forEach(b => {
+                        const icon = b.querySelector('i');
+                        document.documentElement.classList.contains('dark') 
+                            ? icon.classList.replace('fa-moon', 'fa-sun') 
+                            : icon.classList.replace('fa-sun', 'fa-moon');
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
